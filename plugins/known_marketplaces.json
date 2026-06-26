@@ -1,0 +1,10 @@
+{
+  "knowledge-work-plugins": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/knowledge-work-plugins"
+    },
+    "installLocation": "C:\\Users\\pys30\\.claude\\plugins\\marketplaces\\knowledge-work-plugins",
+    "lastUpdated": "2026-05-30T03:07:47.733Z"
+  }
+}
