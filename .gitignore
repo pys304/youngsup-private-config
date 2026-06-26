@@ -1,0 +1,30 @@
+# 전체 제외 후 필요한 것만 허용
+*
+
+# 하위 폴더도 동일하게 적용
+!*/
+
+# 허용: 설정 파일
+!CLAUDE.md
+!settings.json
+!.gitignore
+
+# 허용: 스킬 폴더 전체
+!skills/
+!skills/**
+
+# 허용: 메모리 폴더
+!memory/
+!memory/**
+
+# 허용: 플러그인 캐시 (스킬 파일만)
+!plugins/
+!plugins/cache/
+!plugins/cache/**
+!plugins/installed_plugins.json
+!plugins/known_marketplaces.json
+
+# 예외: 플러그인 캐시 내 불필요한 파일 제외
+plugins/cache/**/.in_use/
+plugins/cache/**/.mcp.json
+plugins/marketplaces/

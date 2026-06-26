@@ -1,0 +1,34 @@
+{
+  "enabledPlugins": {
+    "human-resources@knowledge-work-plugins": true,
+    "legal@knowledge-work-plugins": true,
+    "marketing@knowledge-work-plugins": true,
+    "operations@knowledge-work-plugins": true,
+    "productivity@knowledge-work-plugins": true,
+    "pdf-viewer@knowledge-work-plugins": true,
+    "enterprise-search@knowledge-work-plugins": true
+  },
+  "extraKnownMarketplaces": {
+    "knowledge-work-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/knowledge-work-plugins"
+      }
+    }
+  },
+  "agentPushNotifEnabled": true,
+  "remoteControlAtStartup": true,
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -NonInteractive -WindowStyle Hidden -Command \"Add-Type -AssemblyName System.Windows.Forms; $n = New-Object System.Windows.Forms.NotifyIcon; $n.Icon = [System.Drawing.SystemIcons]::Information; $n.BalloonTipTitle = 'Claude Code 세션 시작'; $n.BalloonTipText = 'SOP 워크벤치 작업이 시작되었습니다.'; $n.Visible = $true; $n.ShowBalloonTip(4000); Start-Sleep 5; $n.Dispose()\"",
+            "timeout": 8
+          }
+        ]
+      }
+    ]
+  }
+}
